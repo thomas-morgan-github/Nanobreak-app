@@ -85,6 +85,10 @@ function userLoginCallback(data) {
 		console.log('valid email');
 		$$('#email-login').addClass('valid');
 		$$('#email-fail').removeClass('invalidEmail');
+
+		emailVal = $$('#email-login').val()
+		$$('#user-email').html(emailVal);
+
 	} 
 	else { 
 		$$('#email-fail').addClass('invalidEmail');
