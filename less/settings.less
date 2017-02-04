@@ -1,0 +1,26 @@
+@import (reference) "mixins.less";
+
+.page-content.settings-page  { background-color: @dark-purple;
+	#settings-container { 
+		
+		#button-center { text-align: center; margin-bottom: 30px;
+
+			#login-button-container {   display: inline-block;  text-align: center;   margin-top: 10px;
+				#login-button { box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);  display: inline-block; padding: 19px 104px 19px 104px; background-color: #f5344b;  color: white; font: 18px "budget";  text-transform: uppercase; }
+			}
+		} 
+
+		.section-title { text-align: center; text-transform: uppercase; color: @dark-grey; .mixroboto(600); font-size: 18px; margin-bottom: 10px; margin-top: 30px; }
+		
+
+		.link-container { background-color: @royal-blue; display: block; width: 100%; 
+			.settings-links { color: white; padding-left: 15px; padding-top: 20px; padding-bottom: 20px; display: block; .mixroboto(500); font-size: 18px; position: relative;
+				&::after { right: 15px; width: 15px; height: 15px; background-image: url(../img/SpriteSheet.svg); background-position: 0 -1873px; background-size: 100% auto; background-repeat: no-repeat; background-color: transparent; position: absolute;  content: ''; display: block; top: 50%; margin-top: -6px;  }
+			}
+		}		
+	
+		.link-container.social { margin-top: 2px;}
+	}
+}
+
+

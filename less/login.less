@@ -1,0 +1,75 @@
+@import (reference) "mixins.less";
+
+
+
+::-webkit-input-placeholder { color: white; }
+:-moz-placeholder { color: white; }
+::-moz-placeholder { color: white; }
+:-ms-input-placeholder {   color: white; }
+
+
+
+
+.navbar-fixed .page-content.login-page { background-image: url(../img/login-bg.jpg); background-size: cover; padding-top: 0px;
+	.centered-content {  display: none;}
+	// main logo 
+	.nanobreaks-logo-container { display: block; text-align: center;  position: relative;  margin-top: 20px;
+		.pin-logo { display: block;  position: relative; }
+		.logo-text { display: block; font: 36px "enso"; color: white;  }
+	}
+
+	#title-description { color: white;  font: 21px "budget"; text-align: center; margin-top: 50px; }
+
+	#login-container {  display: block; margin-top: 60px; color: white; text-align: center;
+		#email-fail { display: none; position: relative; top: -20px;  background-color: @error-pink;  padding: 8px; border: 1px solid red; color: black; }
+		#email-fail.invalidEmail { display: inline-block; }
+		#email-container { display: block;
+			#email-label {  
+				&:before { margin-top: 4px; position: absolute; content: ''; width: 24px; height: 16px; background-position: 0 -2812px; background-image: url(../img/SpriteSheet.svg); background-size: 100% auto; }
+			}
+			#email-login {  min-width: 200px; background: transparent; border: 0px; border-bottom: 1px solid white; padding-left: 52px; padding-bottom:  10px;  font-size: 18px; .mixroboto(400); color: white; border-radius: 0px; }
+		}
+		
+		#password-container { display: block; margin-top: 40px;
+			#password-label { 
+				&:before { position: absolute; content: ''; width: 20px; height: 21px;  background-position: 0 -4851px; background-image: url(../img/SpriteSheet.svg); background-size: 100% auto; }
+			}
+			#password-login { min-width: 200px; background: transparent; border: 0px; border-bottom: 1px solid white; padding-left: 52px; padding-bottom:  10px;  font-size: 18px; .mixroboto(400); color: white; border-radius: 0px; }
+		}	
+	}
+
+	#login-button-container{ display: block; text-align: center; margin-top: 100px; 
+		#login-button { display: inline-block; padding: 19px 100px 19px 100px; background-color: @red; color: white; font: 18px "budget"; text-transform: uppercase;  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); }
+	}
+
+	#without-login { color: white; text-align: center; font-size: 18px; margin-top: 20px; display: block; margin-bottom: 50px; }
+
+}
+
+
+
+
+
+@media (min-width:1000px)  { 
+	.navbar-fixed .page-content.login-page #login-container #password-container #password-label:before { background-position: 0 -4896px; }
+}
+
+@media (min-width:600px)  {  
+	.page-content.login-page #login-container {
+		#email-container #email-label:before {  background-position: 0 -2804px; }
+		#password-container #password-label:before { background-position: 0 -4829px; }
+	}
+}
+
+
+@media (max-width: 480px) {
+	
+	.page-content.login-page {
+		#login-container { margin-top: 100px;}
+		#login-button-container { margin-top: 50px; }
+		#title-description { display: none; }
+	}
+
+	.navbar-fixed .page-content.login-page #login-container #password-container #password-label:before {  background-position: 0px -4896px; }
+
+}

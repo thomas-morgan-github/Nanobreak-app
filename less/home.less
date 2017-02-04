@@ -1,0 +1,47 @@
+@import (reference) "mixins.less";
+
+.home-page { text-align: center;
+	
+	a { text-decoration: none; height: 100%; width:100%; }
+
+	#search-container, #best-deals-container, #discover-container, #travel-tips-container { cursor: pointer; position: relative; display: block; width: 100%; background-size: cover; height: 200px; margin-bottom: 2px; background-position: center center; }
+	
+	#search-container { background-image: url(../img/search-container-bg.jpg); }
+	#best-deals-container { background-image: url(../img/best-deals-container-bg.jpg); }
+	#discover-container { background-image: url(../img/discover-container-bg.jpg);}
+	#travel-tips-container { background-image: url(../img/travel-tips-container-bg.jpg); margin-bottom: 0px; }
+
+	.header { color: white; font: 36px "budget";  }
+	.discription { color: white; font-size: 18px; .mixroboto(400);  position: relative;  margin-top: 10px;
+		&:after { background-position: 0px -1071px; width: 9px; height: 10px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat;  background-size: 100% auto; content: ''; position: absolute; margin-left: 4px; bottom: 8px; } 
+	}
+
+}
+
+
+@media (min-width:600px)  {  
+
+	.home-page { 
+		#search-container, #best-deals-container, #discover-container, #travel-tips-container { height: 25%; }
+		.discription:after {  background-position: 0 -1067px; }
+		
+	}
+
+}
+
+
+@media screen and (min-width: 320px) and (max-height: 600px) and (orientation: landscape) {
+		
+	.home-page {
+		#search-container, #best-deals-container, #discover-container , #travel-tips-container { min-height: 200px; }
+	}
+}
+
+
+
+@media screen and (min-width: 320px) and (min-height: 600px) and (orientation: landscape) {
+		
+	.home-page {
+		#search-container, #best-deals-container, #discover-container , #travel-tips-container { min-height: 300px; }
+	}
+}

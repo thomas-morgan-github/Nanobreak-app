@@ -1,0 +1,288 @@
+@import (reference) "mixins.less";
+
+// Search page main container styling  ------------------------------------------------------------------------------------------------------------------------------
+
+.search-bg-page { padding-bottom:30px; background-image: url(../img/new-search-bg.jpg);  width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background-size: cover; background-position: 50% 50%; background-repeat: none;  
+	.centered-content { text-align: left; padding: 0px; width: 80%; }
+}
+
+// info popup 
+.popup-wrappr { background: rgba(0, 0, 0, 0.5); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;   z-index: 999;
+	.popup-info { position: fixed; bottom: 0px; background-color: @charcoal-grey; height: auto;  width: 100%; z-index: 10; color: white;
+		.popup-title { text-align: center; .mixroboto(400); font-size: 20px; margin-top: 22px; }
+		.pop-up-info { text-align: center; margin: 10px; margin-top: 15px; margin-bottom: 20px;}
+		.bottom-skip-bar { height: 40px; width: 100%;     background: linear-gradient(to bottom, #ffd43e 0, #f6bf00 100%); display: block; position: relative; bottom: 0px; color: white; text-align: center;  
+			.bottom-skip {   text-transform: uppercase; .mixroboto(700); top: 11px; position: relative; color: black; }
+		}
+	}
+}
+
+
+
+.swiper-container.search { text-align: center;
+	.swiper-slide { background-color: transparent; }
+	.swiper-pagination-bullets { bottom: auto; left: auto; position: relative; margin-bottom: 20px;}
+}
+
+
+// Start of search form styling ------------------------------------------------------------------------------------------------------
+
+#my-form { display: block; position: relative;  width: 100%; 
+	
+	input { display: block; width: 100%; height: 48px;  border: 0px; text-indent:15px; 	}
+	input[type="text"] { font-size: 16px; color: white; .mixroboto(600); text-indent: 15px; }
+	::-webkit-input-placeholder { .mixroboto(400);  text-indent: 40px; color: white;}
+	:-moz-placeholder { /* Firefox 18- */  .mixroboto(400);  text-indent: 40px; color: white;}
+	::-moz-placeholder {  /* Firefox 19+ */  .mixroboto(400);  text-indent: 40px; color: white; }
+	:-ms-input-placeholder {    .mixroboto(400);  text-indent: 40px; color: white; }
+	
+	.adults-container, .children-container, .infants-container { width: 30%; display: inline-block; float:left;  position: relative;  margin-top: 0px;
+		input { width: 100%; text-indent: 40px; }
+		input[type="text"] { text-indent: 40px; background:rgba(255,255,255, 0.2);  }
+	}
+	
+	.adults-container, .children-container { margin-right: 5%;}
+
+	.leaving-container  {  margin-bottom: 14px; 
+		input { width: 100%; text-indent: 40px; }
+		input[type="text"] { text-indent: 40px; background:rgba(255,255,255, 0.2); }
+	}
+
+
+	
+	label { color: white; .mixroboto(400); font-size: 16px; top: -5px; position: relative; display:block;}
+
+	
+
+
+// Departing from and traveling to autofill input styling ---------------------------------------------------------------------------------------
+	
+	.autosuggest-labels { color: white; .mixroboto(400); font-size: 16px; display: block; position: relative;   margin-bottom: 5px; }
+
+	.list-block { margin-bottom: 14px; margin-top: 0px; height: 48px;
+		input { display: block;   width: 100%;   height: 48px;    border-radius: 2px;    border: 0; }
+		.item-content { padding-left: 0px; display: block; width: 100%;  border-radius: 2px;  border: 0px; text-indent:15px;  
+		
+		}
+		.item-input { min-height: 48px; margin-top: 0px; margin-bottom: 0px; 
+
+		}
+		
+		::-webkit-input-placeholder {   text-indent: 15px;}
+		:-moz-placeholder { /* Firefox 18- */  text-indent: 15px;}
+		::-moz-placeholder {  /* Firefox 19+ */ text-indent: 15px; }
+		:-ms-input-placeholder {  text-indent: 15px;  }
+	}
+
+
+// Ui tool tip for user input errors  
+.ui-tool-tip-departing ,  .ui-tool-tip-destination { left: 20px; margin-top: -2px; position: absolute; display: none; z-index: 9999;  border-width: 1px; border-style: solid; color: white;  font-size: 12px;  line-height: 12px;  background-color: #db4e3c; border-color: #bd2c1d;     -moz-border-radius: 5px;    -webkit-border-radius: 5px;    border-radius: 5px;     -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);    -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);   box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
+	.ui-tooltip-content { border-radius: 4px; .mixroboto(300);  text-align: left; position: relative; padding-top: 12px; padding-bottom: 12px; padding-left: 0px; padding-right: 0px; top: 1px; padding-right: 15px;
+		&:before { width: 20px; height: 14px; background-image: url(../img/SpriteSheet.svg); background-position: 0 -2117px; background-size: 100% auto; background-repeat: no-repeat; background-color: transparent; position: absolute;  content: ''; display: block; margin-top: -24px; left: 5px; }
+	}
+}
+
+.ui-tool-tip-departing.active-tooltip , .ui-tool-tip-destination.active-tooltip  { display: inline-block; }
+
+ // Icons grey for in active input fields  ------------------------------------------------------------------------------------------------------
+	
+	.leaving-icon  { position: relative;
+		&::before { background-position: 0px -2380px; width: 25px; height:23px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat; background-size: 100% auto; content: ''; position: absolute; top: -36px; left: 7px; } 
+	}
+	
+	.adults-icon { position: relative;
+		&::before { background-position: 0px -2602px; width: 27px; height:17px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat;   background-size: 100% auto; content: ''; position: absolute; top: -33px; left: 7px; } 
+	}
+
+	.childrens-icon { position: relative;
+		&::before { background-position: 0 -2626px; width: 27px; height:24px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat;   background-size: 100% auto; content: ''; position: absolute; top: -38px; left: 7px; } 
+	}
+
+	.infants-icon { position: relative;
+		&::before {  background-position: 0 -2657px; width: 27px; height:19px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat;   background-size: 100% auto; content: ''; position: absolute; top: -34px; left: 7px; } 
+	}
+
+	.down-arrow-icon { background-position:  0 -2078px; width: 17px; height: 10px; background-image: url(../img/SpriteSheet.svg); background-repeat: no-repeat;   background-size: 100% auto; content: ''; position: absolute; top: 44px; right: 16px; } 
+
+
+
+}
+
+
+
+// Input drop down styling ----------------------------------------------------------------------------------------------------------------
+
+.adults-container.active ,   .children-container.active , .infants-container.active  { display: block;
+	ul { z-index: 9; display: block;  list-style: none;   margin: 0;   padding: 0;  margin-top: -1px; background-color: white; width: 100%; position: absolute;}
+}
+
+.adults-container,  .children-container, .infants-container  {
+ 	ul { display: none; 
+		 li {  padding: 8px; 
+			span { display: inline-block; }
+			span + span { margin-left: 10px;  }
+		 }
+		 li:hover, li.active {  background: grey;}
+ 	} 
+}
+
+
+
+// Calender Popups stying ---------------------------------------------------------------------------------------------------------------------
+
+.toolbar-inner { color: black; }
+
+// Next Icon 
+i.icon.icon-next { background-image: url(../img/SpriteSheet.svg); background-position: 0 -886px; width: 10px; height:  12px; }
+
+i.icon.icon-prev{ 	background-image: url(../img/SpriteSheet.svg) ; background-position: 0 -921px; width: 10px; height:  12px;  }
+
+
+
+/* Search Nano-breaks button */
+#compare-nanobreaks-button { display: block; text-align: center; margin-top: 100px; 
+	.compare-button {  display: inline-block; padding: 19px 100px 19px 100px; background-color: @red;  color: white;  font: 18px "budget";  text-transform: uppercase; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);  }
+}
+
+
+/* === Autocomplete === */
+.autocomplete-page .autocomplete-found {
+  display: block;
+}
+.autocomplete-page .autocomplete-not-found {
+  display: none;
+}
+.autocomplete-page .autocomplete-values {
+  display: block;
+}
+.autocomplete-page .list-block ul:empty {
+  display: none;
+}
+.autocomplete-page .navbar .autocomplete-preloader {
+  margin-right: 16px;
+}
+.autocomplete-preloader:not(.autocomplete-preloader-visible) {
+  -webkit-animation: none;
+  animation: none;
+  visibility: hidden;
+}
+.autocomplete-dropdown {
+// background for transparent bg on dropdown results 2------------------------------------------------------------------------------------------------------
+  // background:rgba(255,255,255, 0.9); 
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 500;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  left: 0;
+
+}
+.autocomplete-dropdown .autocomplete-dropdown-inner {
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  z-index: 1;
+}
+.autocomplete-dropdown .autocomplete-preloader {
+  display: block;
+  position: absolute;
+  right: 16px;
+  bottom: 100%;
+  margin-bottom: 8px;
+  width: 20px;
+  height: 20px;
+}
+.autocomplete-dropdown .autocomplete-preloader .preloader-inner-gap,
+.autocomplete-dropdown .autocomplete-preloader .preloader-inner-half-circle {
+  border-width: 3px;
+}
+.autocomplete-dropdown .autocomplete-preloader-visible {
+  display: block;
+}
+
+.autocomplete-dropdown .list-block {
+  margin: 0;
+ 
+}
+.autocomplete-dropdown .list-block ul {
+	li {  }
+}
+.autocomplete-dropdown .list-block ul:before {
+  display: none;
+}
+.autocomplete-dropdown .list-block ul:after {
+  display: none;
+}
+.autocomplete-dropdown .list-block b {
+  font-weight: normal;
+  color: #212121;
+}
+
+.autocomplete-dropdown .list-block {
+	div {  left: -10px; 
+		div { margin-left: 0px; padding-left: 40px; background: transparent; 
+			&:before {  width: 22px; height: 20px; background-image: url(../img/SpriteSheet.svg);  background-position: 0 -1840px; background-size: 100% auto; background-repeat: no-repeat; background-color: transparent; position: absolute;  content: ''; display: block; margin-top: 0px; left: 10px; }
+		}
+	}
+}
+
+.autocomplete-dropdown .autocomplete-dropdown-placeholder { color: #a9a9a9; 
+  div { 
+  		&:before { display: none;}
+	div { padding-left: 16px;  
+ 		&:before { display: none;}
+	}
+  }
+}
+
+
+.list-block { margin: 0px; 
+	ul { background:rgba(255,255,255, 0.2); 
+		
+	}
+}
+
+
+
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+@media (min-width:600px)  {  
+
+	.adults-container { width: 100%;  display: block;}
+
+	.children-container { margin-right: 4%; }
+
+	.ui-tool-tip-departing { left: 120px; margin-top: -6px; position: absolute; display: inline-block; z-index: 9999;  border-width: 1px; border-style: solid; color: white;  font-size: 14px;  line-height: 12px;  background-color: #db4e3c; border-color: #bd2c1d;     -moz-border-radius: 5px;    -webkit-border-radius: 5px;    border-radius: 5px;     -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);    -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);   box-shadow: 1px 1px 3px 1px rgba(0,0,0,.15);
+		.ui-tooltip-content { border-radius: 4px; .mixroboto(300);  text-align: left; position: relative; padding-top: 12px; padding-bottom: 12px; padding-left: 0px; padding-right: 15px; top: 1px;
+			&:before { width: 20px; height: 14px; background-image: url(../img/SpriteSheet.svg); background-position: 0 -2117px; background-size: 100% auto; background-repeat: no-repeat; background-color: transparent; position: absolute;  content: ''; display: block; margin-top: -24px; left: 5px; }
+		}
+	}
+	
+	#my-form {
+		.leaving-container  {  margin-bottom: 40px; }
+		.list-block { margin-bottom: 40px; }
+		.adults-icon::before {  background-position: 0 -2593px; }
+		.childrens-icon::before { background-position: 0 -2615px; }
+		.infants-icon::before { background-position: 0 -2648px; }
+		.leaving-icon::before { background-position: 0 -2371px; }
+		.down-arrow-icon { background-position: 0 -2073px; }
+	}
+
+	i.icon.icon-next {  background-position: 0 -882px; }
+	i.icon.icon-prev {  background-position: 0 -917px; }
+
+	
+} 
+
+
+@media (max-width: 600px) { 
+	#deals-container .deal-wrappr:nth-child(even) { margin-left: 0; }
+}
+
+@media (max-width: 480px) { 
+	#my-form { margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;}
+	#compare-nanobreaks-button { margin-top: 30px; }
+
+}

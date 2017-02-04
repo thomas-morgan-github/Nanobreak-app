@@ -1,0 +1,196 @@
+@import (reference) "mixins.less";
+
+@font-face {
+  font-family: "HandWritingFont";
+  src: url('../fonts/Drawing with markers.ttf') format('truetype');
+}
+
+
+@font-face { 
+	font-family: "enso";
+	src: url("../fonts/enso.ttf") format("truetype");
+}
+
+@font-face { 
+	font-family: "budget";
+	src: url("../fonts/Budget 2012.otf") format("opentype");
+}
+
+.dynamicloadmessage.deal-landing-only { display: none; }
+
+
+body .black {  background: rgba(0,0,0,.8); }
+
+
+
+// preloader 
+.preloader {  -webkit-animation: preloader-outer 3.3s linear infinite;  animation: preloader-outer 1.3s linear infinite }
+
+.preloader-indicator-modal {  margin-left: -46px; margin-top: -46px; border-radius: 50%; padding: 16px;   background: transparent;
+	.preloader { width: 60px; height: 60px; }
+}
+
+.preloader-white {
+    background-image: url(../img/preloader.svg);
+}
+
+.navbar-fixed .page-content.index { padding-top: 0px;  
+
+	.swiper-container-horizontal>.swiper-pagination-bullets { position: relative; bottom: 90px;}
+
+	// Splash screen 
+	.splash-screen-container { position: absolute; width: 100%; height: 100%; z-index: 3; background-color:  @dark-blue; text-align: center;
+		
+		//main logo 
+		.nanobreaks-logo-container { display: block; text-align: center;  position: relative;  margin-top: 100px; display: none;
+			.pin-logo { display: block;  position: relative; }
+			.logo-text { display: block; font: 36px "enso"; color: white;  }
+		}
+
+		.dealchecker-website { position: absolute; bottom: 40px; .mixroboto(400); color: white; display: block; width: 100%; font-size: 18px;   }
+	}
+
+	.splash-screen-container.splash-finished { display: none; }
+
+	
+}
+
+
+
+
+
+/* swiper styles */;
+.swiper-container { height: 100%; }
+.swiper-slide { background: white;
+	span { text-align:center; display:block; }
+}
+.swiper-pagination-bullet { background: white;}
+.swiper-pagination-bullet-active { background: @light-yellow; }
+
+
+.outer-container { position : absolute;  display: table;  width: 100%; /* This could be ANY width */  height: 100%; /* This could be ANY height */ }
+.inner-container {   display: table-cell;    vertical-align: middle;   text-align: center; }
+.centered-content {  display: inline-block;  padding : 20px; }
+
+// search walkthrough 
+.search-walkthrough { background-image: url(../img/search-walkthrough.jpg); background-size: cover; }
+
+// best deals walkthrough 
+.best-deals-walkthrough { background-image: url(../img/best-deals-walkthrough.jpg); background-size: cover; }
+
+// discover-walkthrough
+.discover-walkthrough { background-image: url(../img/discover-walkthrough.jpg); background-size: cover;  }
+
+// Travel tips walkthrough 
+.travel-trip-walkthrough { background-image: url(../img/travel-tip-walkthrough.jpg); background-size: cover;  }
+
+.info-container { display: block; color: white; 
+	.info-title {  display: block; font: 40px "budget"; margin-top: 10px; }
+	.info-description { font-size: 18px; .mixroboto(400);  margin-top: 10px; }
+}
+
+.skip { color: @light-yellow; font-size: 21px; text-align: center; display: block; width: 100%; position: absolute; bottom: 10px; z-index: 10; cursor: pointer; 
+	a { text-decoration: none; color: @light-yellow; }
+}
+
+
+
+
+// Start of app description text 
+#welcome-text { text-align: center; display: block;   z-index: 1; position: relative; color: white; margin-top: 40px; 
+	#welcome { display: block; .mixroboto(400); font-size: 20px; margin: 0; padding: 0; line-height: normal; }
+	#comparison-app-text { display: block; .mixroboto(700); font-size: 20px; margin-top: 10px;  line-height: normal; padding: 0; }
+}
+
+#app-description { display: block; position: relative; z-index: 1; color: white;  text-align: center; font-size: 18px; .mixroboto(300); max-width: 300px; margin: 0 auto;  margin-top: 77px; 
+	.d-one , .d-two , .d-three , .d-four, .d-five , .d-six  {   padding: 0; position: relative; display: block;	}
+	.d-one, .d-two { margin-bottom: 7px;  }
+	.d-four, .d-six { margin-top: 40px; }
+	.d-one, .d-four, .d-six { position: relative;
+		&::before { content: ''; position: absolute; background-size: 100% auto; background-position: 0 -1022px; background-image: url(../img/SpriteSheet.svg); width: 10px; height: 10px; background-repeat: no-repeat; margin-left: -18px; top: 8px; }
+	}
+}
+
+
+/* Search Nano-breaks button */
+.search-button-container  { display: block; z-index: 1; position: relative; margin-bottom: 100px; 
+	.search { z-index: 60003; position: relative;  	top: 50px; border: none;  display: block;  padding: 19px 39px 23px 39px; border-radius: 4px;	-webkit-border-radius: 4px;	-moz-border-radius: 4px;	width: 196px;	height: 20px;	margin: 0 auto;	background: -webkit-linear-gradient(#ffc703, #ffcd1e); /* For Safari 5.1 to 6.0 */    background: -o-linear-gradient(#ffc703, #ffcd1e); /* For Opera 11.1 to 12.0 */  background: -moz-linear-gradient(#ffc703, #ffcd1e); /* For Firefox 3.6 to 15 */    background: linear-gradient(#ffc703, #ffcd1e); /* Standard syntax */		color: black;  	.mixroboto(700);	font-size: 18px;	-webkit-box-shadow: 0 4px 4px -2px #000000;   -moz-box-shadow: 0 4px 4px -2px #000000;    box-shadow: 0 4px 4px -2px #000000;
+		.search-icon { position: relative; z-index: 1;
+			&:before { width: 20px; height: 20px; background-image: url(../img/SpriteSheet.svg); background-position: 0 -1420px; background-size: 100% auto; background-repeat: no-repeat; background-color: transparent; position: absolute;  content: ''; display: block; margin-top: 1px;  z-index: 60001; }
+		}
+		.text { margin-left: 30px; z-index: 60001; position: relative;} 
+	}
+}
+
+
+#what-is-a-nanobreak-container { display: block; position: relative;  z-index: 2; color: white; text-align: right; padding: 10px 20px 30px 0px; width: 100%; text-align: center;
+	a { text-decoration: none; color: white; position: relative;
+		#nanobreak-text { position: relative;  font: 24px "HandWritingFont"; margin-right: 20px;	}
+		.arrow-white { display: block; width: 280px; height: 18px; position:  relative; left: 50%; margin-left: -140px;}
+	}
+}
+
+
+
+
+
+
+
+/* Start of Media Queries for devices (mobile first- min-width styles only apply if screen size is equal to or greater) -------------------------------------------------------------------------- */
+
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {  
+	
+}
+
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  {  
+	#logo-and-image-container #bg-image { background-position: 0px -46px; }
+}
+
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px)  {  
+	#app-description .d-one::before, #app-description .d-four::before, #app-description .d-six::before {     background-position: 0 -1018px;  }
+	.search-button-container .search { width: 240px;
+		.search-icon::before { background-position: 0 -1414px; margin-top: 2px; }
+	}
+	
+	#what-is-a-nanobreak-container { padding-bottom: 10px; margin-top: 100px;
+		a { 
+			#nanobreak-text { font-size: 35px;}
+			.arrow-white { width: 600px; margin-left: -310px;}
+		}
+	}
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px)  {  
+	#app-description { max-width: none; }
+
+}
+
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px)  {  
+	
+}
+
+
+@media screen and (min-width: 320px) and (max-height: 600px) and (orientation: landscape) {
+	#search-layer1, #best-deals-layer1, #discover-layer1, #travel-tip-layer1 { display: none; }
+	.centered-content { padding-top: 40px; }
+	.inner-container {  vertical-align: top;}
+}
+
+
+
+@media (max-width: 480px) { 
+
+	.navbar-fixed .page-content.index .splash-screen-container .nanobreaks-logo-container { margin-top: 30px; }
+	
+
+}
+

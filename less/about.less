@@ -1,0 +1,26 @@
+@import (reference) "mixins.less";
+
+.page-content.about-bg { background-color:  @dark-purple; color: white; text-align: center; 
+	
+	.centered-content { margin-bottom: 100px; }	
+
+	#about-title { font: 21px "budget"; display: block; position: relative; z-index: 2; }
+	#london-svg-container { display: block; margin-top: 40px; position: relative; 	}
+	
+	.about-headers { .mixroboto(400); font-size: 18px; }
+	.about-description { .mixroboto(300);  }
+
+	#version-no, #copyright { .mixroboto(400); font-size: 18px;  display: block; color: @purple-grey; }
+	#version-no { margin-top: 30px;  position: relative; }
+	#copyright-container { 	text-align: center; position: fixed; bottom: 10px;  display: block; width: 100%; }
+}
+
+
+
+
+
+@media (max-width: 600px) { 
+	#copyright { 
+		#all-rights { display: block; }
+	}
+}

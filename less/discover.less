@@ -1,0 +1,27 @@
+@import (reference) "mixins.less";
+
+.page-content.discover-page { background-color:  @dark-purple;  
+
+	#top-attractions-image { position: relative; display: block; width: 100%; height: 200px;  background-size: cover;   background-image: url(../img/paris-BG-landscape.jpg);  background-position: center center; 
+		#top-attractions-title { display: block; color: white; font: 21px "budget";   text-align: center; height: 10px;     text-shadow: 2px 2px 4px #000000;}
+	}
+
+	#discover-container { margin-right: 1%; margin-left: 1%; margin-top: 10px; width: 98%; height: 100%; display: block; position: relative;
+		
+		.top-attraction-container { display: block; background-size: cover; width: 100%;  height: 200px; background-color: black; margin-bottom: 10px; color: white; position: relative;
+			.attraction-name { .mixroboto(500); font-size: 19px; position: absolute; left: 10px; bottom: 40px;}
+			.attraction-rating { position: absolute; bottom: 10px; left: 10px; font-size: 18px; }
+			.see-more { .mixroboto(400); font-size: 16px; position: absolute; right: 10px; bottom: 10px; }
+		}
+
+	}
+	
+
+
+
+
+
+
+
+
+}

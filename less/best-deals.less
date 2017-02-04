@@ -1,0 +1,62 @@
+@import (reference) "mixins.less";
+
+.page-content.best-deals-page { background-color: @dark-purple; }
+
+
+// Preloader styling 
+.dynamicloadmessage {  margin-top: 10px;   box-sizing: border-box;   text-align: center;  opacity: .5; margin-bottom: 20px; margin-right: 1%; margin-left: 1%; 
+	.top-message-wrap {  padding: 20px 30px;  background: white; min-height: 145px;
+		.top-message { font-size: 21px; text-align: center; }
+		.sun-animation {  width: 63px;  height: 63px;   margin: 20px auto;  background: url(../img/sun-animation-loader-mob.gif) no-repeat center center; display: block;  background-size: 100% auto; }
+		.best-result { font-size: 21px; font-weight: 700; display: inline-block;
+			.bs-cheapest {   display: inline-block; .mixroboto(300);   text-align: left;  margin-bottom: -8px; }
+			.result-name { }
+			.result-location { .mixroboto(300); }
+			.result-price {    margin-left: 5px;   color: #ff6d00;    font-size: 22px; }
+			.pnd { .mixroboto(300); }
+		}
+	}
+	.bottom-message { font-size: 1.6em; background: #e4f5fd; padding: 10px 80px;  border-bottom: 1px solid #cfc8bf;  position: relative; .mixroboto(300); font-size: 18px;
+		// &:before {  background-position: 0 -3208px; background-size: 100% auto;  position: absolute;    content: '';    display: block;    width: 31px;    height: 11px;    bottom: -11px;    left: 50%;    margin-left: -15px;   background-image: url(../img/SpriteSheet.svg);    background-repeat: no-repeat; }
+		span { display: block; .mixroboto(700);
+			.holiday-count { display: inline-block; }
+		}
+	}
+}
+
+
+
+.page-content.best-deals-page { 
+
+	// Best Deals styling 
+	.best-result-label { text-align: left; display: block; margin-top: 10px; width: 100%;
+		.best-result-inner { font-size: 14px; background: @navy-blue; padding: 5px 8px; display: inline-block; color: white; text-align: center;
+			span { font-weight:  700; }
+		}
+	}
+
+
+	#deals-container { 
+		.deal-wrappr:nth-child(even) { margin-left: 0; margin-right: 1%; }
+		.deal-wrappr.best {  
+			.result-price-container { background-color:  @orange; padding-left: 45px; 
+				&::before { position: absolute; content: ''; left: 10px; width: 27px; height:24px; top: 50%; margin-top: -12px; background-repeat: no-repeat; background-image: url(../img/SpriteSheet.svg); background-size: 100% auto;    background-position: 0 -3341px; }
+			}
+		}
+	}
+
+	
+
+}
+
+
+@media (min-width: 600px) { 
+
+	.page-content.best-deals-page { 
+		.best-result-label{ width: 49%; }
+	}
+}
+
+@media ( max-width: 600px ) { 
+	.dynamicloadmessage .bottom-message span.refresh-text { display: none; }
+}

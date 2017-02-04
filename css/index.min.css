@@ -1,0 +1,19 @@
+#our-list::after {
+  background-image: url(../../img/HeadSprite.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 26px;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  background-position: 0 -182px;
+  background-size: 100% auto;
+  position: absolute;
+  content: '';
+  display: block;
+  margin-left: -14px;
+}
+.hello {
+  background-color: red;
+  display: block;
+}
