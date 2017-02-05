@@ -959,18 +959,29 @@ myApp.onPageInit('discover', function (page) {
 	$$('.content-block p').eq(3).addClass('active-nav');
 
 
-	$.ajax({
-	  type: 'GET',
-	  url:'https://maps.googleapis.com/maps/api/place/textsearch/json?query=new+york+city+point+of+interest&language=en&key=AIzaSyCtWtsBKcbfPil7FhIoZsvSqba5A2KMB6A',
-	  dataType: 'json',
-	  data: {
-	  	
-	   },
+	// $.ajax({ 
+	// 	type: 'GET',
+	// 	url:  ''
+	// });
 
-	    success: function(hotel){
-	    console.log(hotel);
-	 }
-	});
+
+	$.ajax({
+        type: 'GET',
+        url: 'https://api.foursquare.com/v2/venues/search?near=New+York&client_id=MSRIN1ZK2WCOFOTHSNENAEVLSWQRLGGR2MKURXZZ31WLISQI&client_secret=MSRIN1ZK2WCOFOTHSNENAEVLSWQRLGGR2MKURXZZ31WLISQI&v=20170204',
+        async: false,
+        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function (data) {
+        	var myJson = JSON.parse(data);
+
+        	
+        },
+        error: function (e) {
+            
+        }
+    });
+
 
 
 });
