@@ -967,13 +967,16 @@ myApp.onPageInit('discover', function (page) {
 
 	$.ajax({
         type: 'GET',
-        url: 'https://api.foursquare.com/v2/venues/search?near=New+York&client_id=MSRIN1ZK2WCOFOTHSNENAEVLSWQRLGGR2MKURXZZ31WLISQI&client_secret=MSRIN1ZK2WCOFOTHSNENAEVLSWQRLGGR2MKURXZZ31WLISQI&v=20170204',
+        url: 'https://api.foursquare.com/v2/venues/explore?near=New+York&v=20161016&intent=checkin&client_id=1VQJQBWY242B5BKTBQTFFXG0XTZJTDP31E3AVVK52O1FA0HH&client_secret=VLFS1R5CPN4NMOUQLLCUGC2ORV2QJQXODIUU0JTPKRQFD4SE',
         async: false,
         jsonpCallback: 'jsonCallback',
         contentType: "application/json",
         dataType: 'jsonp',
         success: function (data) {
-        	var myJson = JSON.parse(data);
+        	
+        	console.log(data);
+
+        	
 
         	
         },
