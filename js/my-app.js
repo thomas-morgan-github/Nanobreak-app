@@ -61,47 +61,47 @@ function jsonCallback (data) {
 jsonCallback();
 
 
-myApp.showIndicator() // show modal with Indicator
+// myApp.showIndicator() // show modal with Indicator
 
 
 
-	setTimeout(function() {
-		$$('.preloader-indicator-modal').addClass('black');
-		 myApp.hideIndicator();
-	    $$('.splash-screen-container').addClass('splash-finished');
-	}, 1800); // <-- time in milliseconds
+// 	setTimeout(function() {
+// 		$$('.preloader-indicator-modal').addClass('black');
+// 		 myApp.hideIndicator();
+// 	    $$('.splash-screen-container').addClass('splash-finished');
+// 	}, 1800); // <-- time in milliseconds
 
 
 
-	setTimeout(function() {
-		$('.nanobreaks-logo-container').fadeIn( "slow" );
-	}, 100); 
+// 	setTimeout(function() {
+// 		$('.nanobreaks-logo-container').fadeIn( "slow" );
+// 	}, 100); 
 
 
 
-	function userLoginCallback(data) { 
+function userLoginCallback(data) { 
 
-		if ( data == '123578') { 
-			console.log('valid email');
-			$$('#email-login').addClass('valid');
-			$$('#email-fail').removeClass('invalidEmail');
+	if ( data == '123578') { 
+		console.log('valid email');
+		$$('#email-login').addClass('valid');
+		$$('#email-fail').removeClass('invalidEmail');
 
-			emailVal = $$('#email-login').val()
-			$$('#user-email').html(emailVal);
+		emailVal = $$('#email-login').val()
+		$$('#user-email').html(emailVal);
 
-		} 
-		else { 
-			$$('#email-fail').addClass('invalidEmail');
-		}
-
+	} 
+	else { 
+		$$('#email-fail').addClass('invalidEmail');
 	}
 
+}
 
 
 
 
-	/* login-page --------------------------------------------------------------------------------------------------------- */ 
-	myApp.onPageInit('login', function (page) {
+
+/* login-page --------------------------------------------------------------------------------------------------------- */ 
+myApp.onPageInit('login', function (page) {
 
 	// fade in login page 
 	setTimeout(function() {
@@ -475,44 +475,6 @@ myApp.onPageInit('deal-landing', function (page) {
 	var children = readcontent["children"];
 	var infants = readcontent["infants"];
 
-
-
-
-	// // Append form values to deal landing top nav bar 
-	// $$('.destination').html(destination);
-	// $$('.date').html(date);
-	// $$('.adults').html(adults);
-	// $$('.children').html(children);
-	// $$('.infants').html(infants);
-
-
-	// if ($$('.destination').text() == '' ) { 
-	// 	$$('.destination').html('Any Destination');
-	// }
-
-	// if ($$('.date').text() == '' ) { 
-	// 	$$('.date').html('Any Date');
-	// }
-
-
-	// if ($$('.adults').text() == '' ) { 
-	// 	$$('.adults').html('0');
-	// }
-
-
-	// if ($$('.children').text() == '' ) { 
-	// 	$$('.children').html('0');
-	// }
-
-
-	// if ($$('.infants').text() == '' ) { 
-	// 	$$('.infants').html('0');
-	// }
-
-
-	// if ($$('.infants').text() == '' ) { 
-	// 	$$('.infants').html('0');
-	// }
 
 
 	// local data variable now containes all of dealchecker data pulled from API using JSONP

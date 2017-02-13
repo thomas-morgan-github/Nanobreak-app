@@ -15,11 +15,11 @@
 		
 		.top-attraction-container { display: block; background-size: cover; width: 100%;  height: 300px; background-color: black; margin-bottom: 10px; color: white; position: relative; background-position: center center;
 			
-			.attraction-name { .mixroboto(500); font-size: 21px; position: relative; left: 10px; padding-top: 10px; padding-bottom: 10px; z-index: 2; text-shadow: 2px 2px 4px #000000;   color: @light-yellow; display: block; margin-right: 110px;}
+			.attraction-name { .mixroboto(500); font-size: 21px; position: relative; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; z-index: 2; text-shadow: 2px 2px 4px #000000;   color: @light-yellow; display: block; margin-right: 110px;}
 			
 			.attraction-rating { position: absolute; top: 10px; right: 10px; font-size: 24px; z-index: 2;  color: white; .mixroboto(700); background-color: @orange; width: 60px; height: 60px; border-bottom-right-radius: 6px; border-top-right-radius: 6px; border-top-left-radius: 6px;  line-height: 60px;  text-align: center; }
 			
-			.attraction-address { position: relative; z-index: 2; font-size: 16px; text-shadow: 2px 2px 4px #000000; left: 10px; padding-bottom: 10px; display: block; margin-right: 110px; }
+			.attraction-address { position: relative; z-index: 2; font-size: 16px; text-shadow: 2px 2px 4px #000000; padding-left: 10px; padding-bottom: 10px; display: block; margin-right: 110px; }
 			
 			.bottom-attractions-info { position: absolute; bottom: 0px;   position: absolute; width: 100%; 
 				.attraction-tips { position: relative; padding: 10px; display: block; z-index: 2; font-size: 18px;  text-shadow: 2px 2px 4px #000000;  }
@@ -53,6 +53,16 @@
 
 }
 
+@media (min-width: 600px)  { 
+	// .page-content.discover-page { 
+	// 	#discover-container1 {
+	// 		.top-attraction-container { width: 49%; }
+	// 		.top-attraction-container.london-attractions, .top-attraction-container.paris-attractions, .top-attraction-container.amsterdam-attractions, .top-attraction-container.rome-attractions, .top-attraction-container.new-york-attractions  { display: inline-block; }
+	// 		.top-attraction-container:nth-child(even) { margin-left: 1%; }
+	// 	}
+	// }
+}
+
 
 @media (max-width: 600px) { 
 	.page-content.discover-page #discover-container1 .top-attraction-container { height: 400px; 
@@ -61,6 +71,14 @@
 
 }
 
+
+
 @media(max-width:360px) { 
-	.page-content.discover-page #attraction-nav { font-size: 10px; }
+	.page-content.discover-page #discover-container1{
+		.top-attraction-container .bottom-attractions-info {
+			.attraction-tips { font-size: 14px; }
+			#attraction-nav { font-size: 10px; }
+			.see-more .see-more-link .attraction-link { font-size: 14px; }
+		}
+	}
 }
